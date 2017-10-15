@@ -1,0 +1,6 @@
+c:\users\ffej\documents\visual studio 2015\Projects\GreedyShortestCommonSuperstring\GreedyShortestCommonSuperstring\bin\Debug\GreedyShortestCommonSuperstring.exe.config
+c:\users\ffej\documents\visual studio 2015\Projects\GreedyShortestCommonSuperstring\GreedyShortestCommonSuperstring\bin\Debug\GreedyShortestCommonSuperstring.exe
+c:\users\ffej\documents\visual studio 2015\Projects\GreedyShortestCommonSuperstring\GreedyShortestCommonSuperstring\bin\Debug\GreedyShortestCommonSuperstring.pdb
+c:\users\ffej\documents\visual studio 2015\Projects\GreedyShortestCommonSuperstring\GreedyShortestCommonSuperstring\obj\Debug\GreedyShortestCommonSuperstring.csprojResolveAssemblyReference.cache
+c:\users\ffej\documents\visual studio 2015\Projects\GreedyShortestCommonSuperstring\GreedyShortestCommonSuperstring\obj\Debug\GreedyShortestCommonSuperstring.exe
+c:\users\ffej\documents\visual studio 2015\Projects\GreedyShortestCommonSuperstring\GreedyShortestCommonSuperstring\obj\Debug\GreedyShortestCommonSuperstring.pdb
