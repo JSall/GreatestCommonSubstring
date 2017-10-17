@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GreedyShortestCommonSuperstring
 {
-    class Program
+    public class Program
     {
         static string[] Input1 = { "all is well", "ell that en", "hat end", "t ends well", null };
         static string[] Input2 = { "the black dog h", "og howls at th", "at the mo", "moon", "" };
@@ -27,6 +27,16 @@ namespace GreedyShortestCommonSuperstring
             input = Input5.ToList();
             MergeAllAndPrint(input);
 
+        }
+
+        public static string MergeAll(List<string> input)
+        {
+            while (input.Count > 1)
+            {
+                MergeMaxSubstrings(input);
+            }
+
+            return input.FirstOrDefault();
         }
 
         public static void MergeAllAndPrint(List<string> input)
@@ -66,14 +76,17 @@ namespace GreedyShortestCommonSuperstring
 
             for (int i = 0; i < input.Count; i++)
             {
-                for (int j = i + 1; j < input.Count; j++)
+                for (int j = 0; j < input.Count; j++)
                 {
-                    int overLap = FindOverlapLength(input[i], input[j], out merged);
-                    if (overLap >= maxOverlap)
+                    if (i != j)
                     {
-                        maxOverlap = overLap;
-                        maxMerged = merged;
-                        NodesToMerge = new KeyValuePair<int, int>(i, j);
+                        int overLap = FindOverlapLength(input[i], input[j], out merged);
+                        if (overLap >= maxOverlap)
+                        {
+                            maxOverlap = overLap;
+                            maxMerged = merged;
+                            NodesToMerge = new KeyValuePair<int, int>(i, j);
+                        }
                     }
                 }
             }
@@ -104,14 +117,15 @@ namespace GreedyShortestCommonSuperstring
 
             for (int i = 0; i < s1.Length; i++)
             {
-                int j = 0;
+                int s1Index = i;
+                int s2Index = 0;
                 int overlap = 0;
                 string substring = "";
-                while (i < s1.Length && j < s2.Length && s1[i] == s2[j])
+                while (s1Index < s1.Length && s2Index < s2.Length && s1[s1Index] == s2[s2Index])
                 {
-                    substring += (s1[i]);
-                    ++i;
-                    ++j;
+                    substring += (s1[s1Index]);
+                    ++s1Index;
+                    ++s2Index;
                     ++overlap;
                 }
 
